@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- design based on 1024x768 resolution -->
+<config>
+	<files>
+		<file dir='/assets/sounds/' ext='mp3'>btnSpinOk</file>
+		<file dir='/assets/sounds/' ext='mp3'>btnSpinWrong</file>
+		<file dir='/assets/sounds/' ext='mp3'>buttonHold</file>
+		<file dir='/assets/sounds/' ext='mp3'>spinEndCycle</file>
+		<file dir='/assets/sounds/' ext='mp3'>spinning</file>
+		<file dir='/assets/sounds/' ext='mp3'>cash3</file>
+		<file dir='/assets/sounds/' ext='mp3'>cash4</file>
+		<file dir='/assets/atlases/' ext='png'>slotmachine</file>
+		<file dir='/assets/atlases/' ext='xml'>slotmachine</file>
+		<file dir='/assets/atlases/' ext='fnt'>font</file>
+	</files>
+	<slotmachine>
+		<window > 
+			<usableWidth>0.85</usableWidth> <!-- defines space for slots. slots are aligned to the center -->
+			<usableHeight>0.9</usableHeight> <!--relative to slot width-->
+			<slotGap>0.1</slotGap> <!--relative to slot width, spcaes between particular gaps -->
+		</window>
+		<slots>
+			<numSlots>4</numSlots><!-- how many slots in the window -->
+			<gapOfIcon>0.4</gapOfIcon><!-- if slot icon is 20 height, gapOfIcon=0.4 would make 5px gap-->
+			<updateEvery>0.3</updateEvery><!-- huge impact on performance. paralax control. im lower tym higher impact..-->
+			<icons><!-- these names must match slotmachine.xml -->
+				<icon id='apple' betPrice='20' 3='300' 4='800'/>
+				<icon id='bar1' betPrice='80' 3='1200' 4='3000'/>
+				<icon id='bar2' betPrice='120' 3='2100' 4='5000'/>
+				<icon id='bar3' betPrice='180' 3='4600' 4='10000'/>
+				<icon id='bell' betPrice='90' 3='900' 4='9000'/>
+				<icon id='cherries' betPrice='30' 3='350' 4='900'/>
+				<icon id='clover' betPrice='40' 3='400' 4='1000'/>
+				<icon id='coins' betPrice='50' 3='500' 4='1200'/>
+				<icon id='diamond' betPrice='70' 3='700' 4='1400'/>
+				<icon id='dolar' betPrice='60' 3='666' 4='1100'/>
+				<icon id='euro' betPrice='45' 3='800' 4='1600'/>
+				<icon id='grapes' betPrice='65' 3='555' 4='1110'/>
+				<icon id='heart' betPrice='10' 3='100' 4='1000'/>
+				<icon id='horshoe' betPrice='75' 3='850' 4='1500'/>
+				<icon id='lemin' betPrice='35' 3='450' 4='990'/>
+				<icon id='melon' betPrice='25' 3='440' 4='888'/>
+				<icon id='orange' betPrice='35' 3='670' 4='1050'/>
+				<icon id='plum' betPrice='30' 3='690' 4='1230'/>
+				<icon id='pound' betPrice='100' 3='1000' 4='2850'/>
+				<icon id='seven' betPrice='7' 3='777' 4='7777'/>
+			</icons>
+		</slots>
+		<ledMessageScreen>
+			<numChars>6</numChars>
+			<charGap>5</charGap>
+			<fontSize>30</fontSize>
+			<fontName>font</fontName> <!-- if it's set to "font" it will use bitmap font, else default system fonts-->
+			<ledCharSpeed>0.2</ledCharSpeed> <!--interval (s) of changing character in ledControler-->
+			<messages>
+				<welcomeText> 
+					<msg>WELCOME! Push the button to start! Lucky or not? lucky or not?! ... </msg>
+					<msg> Hit the road Jack and don't you come back no more, no more, no more, no more. </msg>
+				</welcomeText>
+				<startGame>
+					<msg>
+						   YAY .. YAY ! HERE WE GO!...
+					</msg>
+				</startGame>
+				<zeroMatches>
+					<msg>meh, each on its own ..    once again?      are we playing?      oh come on..   one more..    please? 
+					</msg>
+					<msg> oh snap, nothing this time </msg>
+					<msg> sorry, nothing.. dont stare - spin! </msg>
+					<msg>  what a shame can you believe? </msg>
+					<msg>  not a single match. dodgy game... </msg>
+					<msg>   it was pretty close ! </msg>
+					<msg>  not a single match. dodgy game... </msg>
+					<msg> dont worry, nothing happened. actually you just lost some money .. who cares" </msg>
+					<msg> nice weather out there, isnt it?    .. </msg>
+				</zeroMatches>
+				<startSpin>
+					<msg> Its a new day, its a new spin, who knooowwws </msg>
+					<msg> This time you will be lucky! Mom can feel it!</msg>
+					<msg> Good boy, never stop :) </msg>
+					<msg> Money still there, but why not to make more, huh? </msg>
+					<msg> on and on, roll and roll .. </msg>
+					<msg> yep, it is spinning again  ...</msg>
+					<msg> fortune is comming! </msg>
+				</startSpin>
+				<hitWhileSpinning>
+					<msg> Easy boyyy. Let it spin!  </msg>
+					<msg> Listen! Don't make me play your game </msg>
+				</hitWhileSpinning>
+				<notEnoughMoney>
+					<msg> '  Sorry you have not enough money TO CONITINUE this game. Do some work to earn....... PSST! TAP ON THE YOUR CASH TO EARN SOME </msg>
+				</notEnoughMoney>
+			</messages>
+		</ledMessageScreen>
+		<ledPointsScreen > 
+			<numChars>6</numChars>
+			<charGap>-15</charGap>
+			<fontSize>30</fontSize> 
+			<fontName>font</fontName>
+			<ledCharSpeed>2</ledCharSpeed>
+			<messages>
+				<welcomeText><msg>01010010101</msg></welcomeText>
+			</messages>
+		</ledPointsScreen>
+		<controler>
+			<spinTime min='3' max='5'/><!--in seconds-->
+			<spinDistance min='2' max='3'/><!--full rotations-->
+			<startMoney>1000</startMoney>
+			<moneyPerSpin>10</moneyPerSpin>
+		</controler>
+	</slotmachine>
+</config>

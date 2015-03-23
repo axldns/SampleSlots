@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>SampleSlots</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.aslibnature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] PixelMask</name>
+			<type>2</type>
+			<locationURI>PixelMask</locationURI>
+		</link>
+		<link>
+			<name>[source path] Starling16</name>
+			<type>2</type>
+			<locationURI>Starling16</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
